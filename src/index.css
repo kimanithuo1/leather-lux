@@ -1,4 +1,29 @@
 @import "tailwindcss";
+
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-espresso: 61, 43, 31;
+  --color-cognac: 166, 123, 91;
+  --color-matte: 28, 28, 28;
+  --color-gold: 212, 175, 55;
+  --color-ivory: 245, 245, 220;
+}
+
+@layer base {
+ 
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-sans;
+  }
+}

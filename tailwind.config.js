@@ -5,14 +5,30 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        amber: {
-          400: "#FBBF24",
-          500: "#F59E0B",
+        ivory: {
+          DEFAULT: "rgb(var(--color-ivory) / <alpha-value>)",
+          light: "rgb(var(--color-ivory-light) / <alpha-value>)",
+          dark: "rgb(var(--color-ivory-dark) / <alpha-value>)",
         },
-        stone: {
-          100: "#F5F5F4",
-          800: "#292524",
-          900: "#1C1917",
+        espresso: {
+          DEFAULT: "rgb(var(--color-espresso) / <alpha-value>)",
+          light: "rgb(var(--color-espresso-light) / <alpha-value>)",
+          dark: "rgb(var(--color-espresso-dark) / <alpha-value>)",
+        },
+        cognac: {
+          DEFAULT: "rgb(var(--color-cognac) / <alpha-value>)",
+          light: "rgb(var(--color-cognac-light) / <alpha-value>)",
+          dark: "rgb(var(--color-cognac-dark) / <alpha-value>)",
+        },
+        matte: {
+          DEFAULT: "rgb(var(--color-matte) / <alpha-value>)",
+          light: "rgb(var(--color-matte-light) / <alpha-value>)",
+          dark: "rgb(var(--color-matte-dark) / <alpha-value>)",
+        },
+        gold: {
+          DEFAULT: "rgb(var(--color-gold) / <alpha-value>)",
+          light: "rgb(var(--color-gold-light) / <alpha-value>)",
+          dark: "rgb(var(--color-gold-dark) / <alpha-value>)",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -49,7 +65,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        sans: ["Playfair Display", "serif"],
+        body: ["Lato", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

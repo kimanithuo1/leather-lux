@@ -1,22 +1,50 @@
+import { Link } from "react-router-dom"
+
 const Hero = () => {
-    return (
-      <section className="bg-stone-100 py-20">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-10 md:mb-0">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Elevate Your Style with Premium Leather</h2>
-            <p className="text-xl mb-6">Discover our exquisite collection of handcrafted leather accessories.</p>
-            <button className="bg-amber-400 text-stone-900 px-6 py-3 rounded-full text-lg font-semibold hover:bg-amber-500 transition duration-300">
-              Shop Now
-            </button>
+  return (
+    <section className="pt-24 bg-gradient-to-b from-[rgb(var(--color-espresso))] to-[rgb(var(--color-matte))]">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row items-center py-16 md:py-24">
+          <div className="md:w-1/2 mb-10 md:mb-0 text-[rgb(var(--color-ivory))]">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-sans font-bold mb-6 leading-tight">
+              Elevate Your Style with Premium Leather
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-[rgb(var(--color-ivory)_/_0.8)] font-body max-w-xl">
+              Discover our exquisite collection of handcrafted leather accessories, where timeless elegance meets modern
+              sophistication.
+            </p>
+            <div className="flex space-x-4">
+              <Link
+                to="/products"
+                className="bg-[rgb(var(--color-gold))] text-[rgb(var(--color-espresso))] px-8 py-4 rounded-full text-lg font-semibold hover:bg-[rgb(var(--color-cognac))] transition-colors duration-300 inline-flex items-center"
+              >
+                Shop Now
+              </Link>
+              <Link
+                to="/about"
+                className="border-2 border-[rgb(var(--color-gold))] text-[rgb(var(--color-gold))] px-8 py-4 rounded-full text-lg font-semibold hover:bg-[rgb(var(--color-gold))] hover:text-[rgb(var(--color-espresso))] transition-colors duration-300 inline-flex items-center"
+              >
+                Learn More
+              </Link>
+            </div>
           </div>
-          <div className="md:w-1/2">
-            <img src="/placeholder.svg?height=400&width=600" alt="LeatherLux products" className="rounded-lg shadow-lg" />
+          <div className="md:w-1/2 relative">
+            <img
+              src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7"
+              alt="Premium Leather Bag"
+              className="rounded-lg shadow-2xl w-full object-cover transform hover:scale-105 transition-transform duration-500"
+              style={{ height: "600px" }}
+            />
+            <div className="absolute -bottom-6 -left-6 bg-[rgb(var(--color-gold))] text-[rgb(var(--color-espresso))] p-4 rounded-lg shadow-xl">
+              <p className="text-lg font-semibold">Handcrafted Excellence</p>
+              <p className="text-sm">Premium Quality Guaranteed</p>
+            </div>
           </div>
         </div>
-      </section>
-    )
-  }
-  
-  export default Hero
-  
-  
+      </div>
+    </section>
+  )
+}
+
+export default Hero
+
