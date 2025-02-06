@@ -1,22 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap");
 @import "tailwindcss";
 
-
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --color-espresso: 61, 43, 31;
-  --color-cognac: 166, 123, 91;
-  --color-matte: 28, 28, 28;
-  --color-gold: 212, 175, 55;
-  --color-ivory: 245, 245, 220;
-}
+  /* Base colors */
+  --background: #f5f5dc; /* ivory */
+  --foreground: #1c1c1c; /* matte */
 
+  /* Primary colors */
+  --primary: #d4af37; /* gold */
+  --primary-foreground: #3d2b1f; /* espresso */
+
+  /* Secondary colors */
+  --secondary: #a67b5b; /* cognac */
+  --secondary-foreground: #f5f5dc; /* ivory */
+
+  /* Accent colors */
+  --accent: #3d2b1f; /* espresso */
+  --accent-foreground: #f5f5dc; /* ivory */
+
+  /* Muted colors */
+  --muted: #e6e6ca; /* ivory-dark */
+  --muted-foreground: #8f6849; /* cognac-dark */
+
+  /* Card colors */
+  --card: #ffffff;
+  --card-foreground: #1c1c1c; /* matte */
+
+  /* Popover colors */
+  --popover: #ffffff;
+  --popover-foreground: #1c1c1c; /* matte */
+
+  /* Border and ring colors */
+  --border: #e6e6ca; /* ivory-dark */
+  --input: #e6e6ca; /* ivory-dark */
+  --ring: #d4af37; /* gold */
+
+  /* Radius */
+  --radius: 0.5rem;
+}
+/*
 @layer base {
- 
+  body {
+    @apply bg-accent text-foreground font-body;
+  }
 
   h1,
   h2,
@@ -27,3 +58,30 @@
     @apply font-sans;
   }
 }
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold hover:bg-secondary transition-colors duration-300;
+  }
+
+  .btn-secondary {
+    @apply bg-accent text-accent-foreground px-6 py-3 rounded-full font-semibold hover:bg-secondary transition-colors duration-300;
+  }
+}..............*/
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+

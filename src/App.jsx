@@ -15,7 +15,7 @@ import Products from "./pages/Products"
 function App() {
   return (
     <CartProvider>
-      <div className="flex flex-col min-h-screen bg-[rgb(var(--color-ivory))]">
+      <div className="flex flex-col min-h-screen bg-background">
         <Header />
         <main className="flex-grow">
           <Routes>
@@ -35,7 +35,13 @@ function App() {
             />
             <Route path="/products" element={<Products />} />
             <Route path="/cart" element={<Cart />} />
-          </Routes>
+            <Route path="/about" element={<About />} />
+            <Route path="/craftsmanship" element={<Craftsmanship />} />
+            <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/newsletter" element={<Newsletter />} />
+            
+ s         </Routes>
         </main>
         <Footer />
       </div>
